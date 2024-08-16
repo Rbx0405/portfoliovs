@@ -37,6 +37,7 @@ header {
     z-index: 100;
 }
 
+
 .logo {
     font-size: 3rem;
     color: #b74b4b;
@@ -217,6 +218,14 @@ span {
     right: -8px; /* Added px unit */
     animation: cursor 0.6s infinite;
 }
+
+.social-icons img{
+    width: 25px;
+    height: 25px;
+}
+
+
+
 
 @keyframes cursor {
     to {
