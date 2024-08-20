@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="profile_webpage_design.css">
-   
+    <script src="script.js"></script>
     <title>Portfolio Website</title>
 </head>
 <body>
@@ -12,15 +12,28 @@
         <a href="#" class="logo">RB2004</a>
 
         <nav>
-            <a href="#" class="active">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="Skills.html">Skills</a>
-            <a href="Education.html">Education</a>
-            <a href="Experience.html">Experience</a>
-            <a href="Contact.html">Contact</a>
-        </nav>
+            <a class="menu-button"  onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+            <a class="close-button" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+            <ul class="sidebar">
+                <a href="projects.html">Projects</a>
+                <a href="Skills.html">Skills</a>
+                <a href="Education.html">Education</a>
+                <a href="Experience.html">Experience</a>
+                <a href="Contact.html">Contact</a>
+                
+            </ul>
+            
 
-       
+            <ul class="desktop">
+                <a  href="#" class="active">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="Skills.html">Skills</a>
+                <a href="Education.html">Education</a>
+                <a href="Experience.html">Experience</a>
+                <a href="Contact.html">Contact</a>
+                
+            </ul>
+        </nav>
         </button>
     </header>
 
@@ -49,7 +62,6 @@
             <a href="#" class="btn">Hire me</a>
         </div>
     </section>
-    <script src="index.js"></script>
 </body>
 </html>
 
