@@ -1,70 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const sidebar = document.querySelector('.sidebar');
-    const menuButton = document.querySelector('.menu-button');
-    const closeButton = document.querySelector('.close-button');
+let menuActive = false;
 
-    // Function to update visibility based on screen width
-    function updateVisibility() {
-        if (window.innerWidth > 1000) {
-            sidebar.style.display = 'none';
-            menuButton.style.display = 'none';
-            closeButton.style.display = 'none';
-        } else {
-            sidebar.style.display = 'none';
-            menuButton.style.display = 'block';
-            closeButton.style.display = 'none';
-        }
-    }
+const hamMenu = document.querySelector('.hamburger-menu');
+const menu = document.querySelector('.menu');
 
-    // Initial check
-    updateVisibility();
-
-    // Add an event listener to handle window resize
-    window.addEventListener('resize', updateVisibility);
+hamMenu.addEventListener('click', () => {
+    menuActive = !menuActive;
+    hamMenu.classList.toggle('active');
+    menu.classList.toggle('active');
 });
 
 
 
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const sidebar = document.querySelector('.sidebar');
-    const menuButton = document.querySelector('.menu-button');
-    const closeButton = document.querySelector('.close-button');
-
-    // Initial display settings
-    sidebar.style.display = 'none';
-    menuButton.style.display = 'block';
-    closeButton.style.display = 'none';
-});
-
-
-
-
-
-let isSidebarVisible = false; // Boolean to track sidebar visibility
-
-function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    const menuButton = document.querySelector('.menu-button');
-    const closeButton = document.querySelector('.close-button');
-    
-    if (isSidebarVisible) {
-        sidebar.style.display = 'none';
-        menuButton.style.display = 'block';
-        closeButton.style.display = 'none';
-    } else {
-        sidebar.style.display = 'flex';
-        menuButton.style.display = 'none';
-        closeButton.style.display = 'block';
-    }
-    
-    isSidebarVisible = !isSidebarVisible; // Toggle the boolean value
-}
-
-// Add event listeners to the buttons
-document.querySelector('.menu-button').addEventListener('click', toggleSidebar);
-document.querySelector('.close-button').addEventListener('click', toggleSidebar);
