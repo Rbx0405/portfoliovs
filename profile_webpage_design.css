@@ -25,6 +25,7 @@ body {
 }
 
 
+
 nav{
     position: fixed;
     top: 0;
@@ -330,13 +331,13 @@ span {
         content: "Developer";
     }
     41%, 60% {
-        content: "Web Designer";
+        content: "Hello World!";
     }
     61%, 80% {
         content: "You Tripping!";
     }
     81%, 100% {
-        content: "Script Writer";
+        content: "You need Sleep!";
     }
 }
 
