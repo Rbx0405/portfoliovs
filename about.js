@@ -22,3 +22,5 @@ let intro = document.querySelector('.intro')
       },2300);
     })
   })
+
+  

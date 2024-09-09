@@ -21,16 +21,27 @@ body {
 	background-repeat: no-repeat;
 	color: white;
   }
-  About{
-	size: 200px;
-  }
-information{
-    text-align: center;
-	bottom: 1rem;
-
-    
-
+  /* Container to hold both sections */
+  .container {
+	display: flex;
 }
+
+/* Left section styles */
+.left-section {
+	flex: 1; /* Adjusts to take 50% width */
+	padding: 20px;
+	background-color: lightblue;
+	height: 100vh; /* Full viewport height */
+}
+
+/* Right section styles */
+.right-section {
+	flex: 1; /* Adjusts to take 50% width */
+	padding: 20px;
+	background-color: lightcoral;
+	height: 100vh; /* Full viewport height */
+}
+
 
 h1{
     font-size: 300%;
