@@ -42,6 +42,7 @@ input{
 textarea{
     height: fit-content;
     width: fit-content;
+    border-radius: 10px;
 }
 .contact-container{
     height: 100vh;
@@ -58,6 +59,14 @@ image{
     flex-direction: column;
     align-items: start;
     gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+button{
+    border-radius: 20px;
+    color: black;
+    background-color: red;
+    padding: 10px;
 }
 textarea{
     width: max-content;
