@@ -41,42 +41,43 @@
     <script src="script.js"></script>
    
 
-    <div class="contact-container">
-        <form action=" " class="contact-left">
-
-            <div class="contact-left-title">
-                <h2>Get in touch</h2>
-                <hr>
-                <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
-                <input type="email" name="email" placeholder=" Your email" class="contact-input" required>
-                <textarea name="message" placeholder="Your message" class="contact-input" required></textarea>
-                <button type="submit">Submit</button>
-
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
             </div>
+    
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span id="emailError" class="error"></span>
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+    
+            <input type="submit" value="Submit">
         </form>
-        <div class="contact-right">
-           
-        </div>
-    </div>
-    <div class="social-icons">
-        
-        <a href="https://www.linkedin.com/in/rishit-butola-18025127a/"><i class="fa-brands fa-linkedin"></i>
-        <img src="assets/linkedinlogo.svg"
-        </a>
-        <a href="https://github.com/Rbx0405"><i class="fa-brands fa-github"></i>
-        <img src="assets/githublogo.svg"
-        </a>
-        <a href="mailto:rishitbutola10@gmail.com"><i class="fa-brands fa-gmail"></i>
-        <img src="assets/gmaillogo.svg"
-        </a>
-        <a href="https://www.instagram.com/rishitbx04/"><i class="fa-brands fa-instagram"></i>
-        <img src="assets/instagramlogo.svg">
-        </a>
     </div>
     
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            let emailInput = document.getElementById('email');
+            let emailError = document.getElementById('emailError');
 
+            // Clear previous error
+            emailError.textContent = '';
 
-   
-    
+            // Check if the email contains '@'
+            if (!emailInput.value.includes('@')) {
+                emailError.textContent = 'Please enter a valid email address with "@"';
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
 </body>
 </html>
